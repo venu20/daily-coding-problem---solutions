@@ -4,6 +4,10 @@ import {Steps, uniqueSteps, unique} from './steps.js';
 import { Trie } from './autocomplete.js';
 import './job_scheduler.js';
 import './array_product.js';
+import './closures.js';
+import './air_bnb.js';
+import './amazon.js';
+import './google.js';
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;
