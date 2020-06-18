@@ -7,7 +7,7 @@ import './array_product.js';
 import './closures.js';
 import './air_bnb.js';
 import './amazon.js';
-import './google.js';
+// import './google.js';
 // Write Javascript code!
 const appDiv = document.getElementById('app');
 appDiv.innerHTML = `<h1>JS Starter</h1>`;

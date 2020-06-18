@@ -9,13 +9,13 @@ class LinkedList{
     this.head = new Node();
   }
   addItem(x){
+    if(this.head.value){
+      this.head = this.head.next;
+    } else {
+      this.head.value = x;
+      this.head.next = new Node(); 
+    }
     console.log(this.head);
-  //  if(this.head.value){
-  //    this.head = this.head.next;
-  //    this.addItem(x);
-  //  }else {
-  //    this.head.value = x;
-  //  }
    }
 }
 
