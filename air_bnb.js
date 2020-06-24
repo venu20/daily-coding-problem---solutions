@@ -12,5 +12,43 @@
 // 13,9
 
 // IF empty array 
-  // Return zero
+// Return zero
 // return max of (0th item of array + recursive(2nd item to end) , 1st item of array+recursive(3rd item to end))
+let sumMap = new Map();
+const nonAdjacentLargestSum = (arr) => {
+  if (!arr.length || !arr[0]) {
+    return 0;
+  }
+
+
+  const len = arr.length;
+  const evenList = arr.slice(2, len);
+  const oddList = arr.slice(3, len);
+
+  if (sumMap.has(evenList)) {
+    console.log('coming');
+    return sumMap.get(arr);
+  } else {
+    const evenListSum = nonAdjacentLargestSum(evenList);
+    sumMap.set(evenList, evenListSum);
+  }
+  
+   if (sumMap.has(oddList)) {
+     console.log(oddList);
+    return sumMap.get(arr);
+  } else {
+    const oddListSum = nonAdjacentLargestSum(oddList);
+    sumMap.set(oddList, oddListSum);
+  }
+
+  arr[1] = arr[1] ? arr[1] : 0;
+  arr[0] = arr[0] ? arr[0] : 0;
+
+  return Math.max(arr[0] + nonAdjacentLargestSum(evenList), arr[1] + nonAdjacentLargestSum(oddList));
+}
+
+const result = nonAdjacentLargestSum([5, 1, 1,5]);
+
+
+console.log('RESPONE')
+console.log(result);
