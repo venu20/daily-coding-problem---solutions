@@ -14,26 +14,27 @@
 // IF empty array 
 // Return zero
 // return max of (0th item of array + recursive(2nd item to end) , 1st item of array+recursive(3rd item to end))
-let counter = 0;
-const nonAdjacentLargestSum = (arr) => {
-  counter++;
-  if (!arr.length || !arr[0]) {
-    return 0;
-  }
+// let counter = 0;
+// const nonAdjacentLargestSum = (arr) => {
+//   counter++;
+//   if (!arr.length || !arr[0]) {
+//     return 0;
+//   }
 
 
-  const len = arr.length;
-  const evenList = arr.slice(1, len);
-  const oddList = arr.slice(2, len);
+//   const len = arr.length;
+//   const evenList = arr.slice(2, len);
+//   const oddList = arr.slice(3, len);
 
-  arr[1] = arr[1] ? arr[1] : 0;
-  arr[0] = arr[0] ? arr[0] : 0;
+//   arr[1] = arr[1] ? arr[1] : 0;
+//   arr[0] = arr[0] ? arr[0] : 0;
 
-  return Math.max(nonAdjacentLargestSum(evenList), arr[0] + nonAdjacentLargestSum(oddList));
-}
+//   return Math.max(arr[0] + nonAdjacentLargestSum(evenList), arr[1] + nonAdjacentLargestSum(oddList));
+// }
 
-const result = nonAdjacentLargestSum([5, 1, 1, 5]);
-console.log(result)
+// const result = nonAdjacentLargestSum([5, 1, 1, 5,5, 1, 1, 5,5, 1, 1, 5,5, 1, 1, 5,5, 1, 1, 5]);
+// console.log(result)
+// console.log(counter);
 // BETTER APPROACH
 
 // Write a function

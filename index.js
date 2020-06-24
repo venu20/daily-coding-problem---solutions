@@ -1,6 +1,6 @@
 // Import stylesheets
 import './style.css';
-import {Steps, uniqueSteps, unique} from './steps.js';
+import './steps.js';
 // import { Trie } from './autocomplete.js';
 // import './job_scheduler.js';
 // import './array_product.js';
