@@ -2,26 +2,15 @@
 
 // // For example, [2, 4, 6, 2, 5] should return 13, since we pick 2, 6, and 5. [5, 1, 1, 5] should return 10, since we pick 5 and 5.
 
-// // [2,5,-3,4,9] => 13 => 5,9
-// // [1,2] => 0
-// // [5,28,10] => 1,2,3 => 15
-// // 2 + 9 
+// 5 + max([1,5]), 1 + max([5])
+// 5 + max(1,5), 1 + 5)
+// 10 , 6
 
-// function nonAdjacent(input){
-//   const odd = 0;
-//   const even = 0;
-// for(let i=0;i<=input.length;i++){
-//   if(i%2===0){
-//     even += input[i];
-//   } else {
+// 2 + max([6,2,5]), 4 + max([2,5])
+// 2 + max(6 + max([5]),2), 4+5
+// 2 + 11,9
+// 13,9
 
-//     odd += input[i];
-//   }
-// }
-// console.log(odd > even ? odd : even);
-// }
-
-// nonAdjacent([2,4,6,2,5]);
-
-
-// nonAdjacent([5,1,1,5]);
+// IF empty array 
+  // Return zero
+// return max of (0th item of array + recursive(2nd item to end) , 1st item of array+recursive(3rd item to end))
