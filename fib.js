@@ -11,14 +11,14 @@ const fib = (n) => {
   return result[n];
 }
 
-console.log(fib(31));
+console.log(fib(900));
 
 const shortFib = (n) => {
   if(n < 2) {
     return n;
   }
 
-  return shortFib(n-1) + shortFib(n-2);
+  return memoize(n-1) + memoize(n-2);
 }
 
 const memFib = (fn) => {
@@ -33,6 +33,7 @@ const memFib = (fn) => {
   }
 }
   const t0 = performance.now();
-console.log(memFib(shortFib)(3));
+  const memoize = memFib(shortFib);
+  console.log(memoize(900));
   const t1 = performance.now();
   console.log(`Memoization: ${t1-t0}`);
