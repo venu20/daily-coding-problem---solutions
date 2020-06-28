@@ -21,23 +21,32 @@ class LinkedList {
   }
 
   insertLast(item) {
-    if(!this.root) {
+    if (!this.root) {
       this.root = new Node(item);
+    } else {
+      const temp = this.root;
+      while(temp.next) {
+        temp = temp.next;
+      }
+      temp.next = new Node(item);
     }
-    const temp = this.root;
-    while(temp.next) {
-      temp = this.root.next;
-    }
-    temp.next = new Node(item);
-    this.root = temp;
+
   }
 
   getFirst(item) {
-
+    const temp = this.root;
+    if(temp && temp.data){
+      return temp.data;
+    }
+    return null;
   }
 
   getLast(item) {
-
+    const temp = this.root;
+    while(temp.next) {
+      temp = temp.next;
+    }
+    return temp.data;
   }
 
   size() {
@@ -53,11 +62,12 @@ class LinkedList {
 
 const ll = new LinkedList();
 ll.insertLast(5);
+ll.insertLast(8);
+ll.insertLast(80);
+ll.insertLast(81);
+ll.insertLast(82);
 
-// ll.insertLast(8);
-// ll.insertLast(8);
-// ll.insertLast(8);
-// ll.insertLast(8);
-
-console.log(ll.root);
-console.log(ll.size())
+console.log("Tree", ll.root);
+console.log("Total Nodes %d", ll.size());
+console.log("First Item", ll.getFirst());
+console.log("Last Item", ll.getLast());

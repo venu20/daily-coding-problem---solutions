@@ -6,7 +6,7 @@ import './steps.js';
 // import './array_product.js';
 // import './closures.js';
 import './air_bnb.js';
-import './linkedList.js';
+// import './linkedList.js';
 // import './fib.js';
 // import './amazon.js';
 // import './google.js';
