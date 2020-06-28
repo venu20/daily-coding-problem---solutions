@@ -33,6 +33,6 @@ const memFib = (fn) => {
   }
 }
   const t0 = performance.now();
-console.log(memFib(shortFib)(300));
+console.log(memFib(shortFib)(3));
   const t1 = performance.now();
   console.log(`Memoization: ${t1-t0}`);
